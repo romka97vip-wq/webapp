@@ -1,0 +1,36 @@
+# OS files
+.DS_Store
+._*
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets
+*.key
+*.pem
+*.crt
+credentials.json
+.env
+.env.local
+.env.*.local
+secrets/
+k8s/01-secret.yaml
