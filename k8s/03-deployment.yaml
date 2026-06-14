@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: docker.io/library/webapp:latest
-          imagePullPolicy: Never
+          image: ghcr.io/romka97vip-wq/webapp:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
           envFrom:
