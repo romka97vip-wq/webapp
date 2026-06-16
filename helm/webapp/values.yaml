@@ -1,0 +1,33 @@
+# Replica count
+replicaCount: 2
+
+# Container image
+image:
+  repository: ghcr.io/romka97vip-wq/webapp
+  tag: latest
+  pullPolicy: IfNotPresent
+
+# Service configuration
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 5000
+
+# Database connection (will be filled in ConfigMap)
+database:
+  host: postgres.postgres
+  port: 5432
+  name: cvstats
+
+# Probes
+livenessProbe:
+  enabled: true
+  path: /health
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+readinessProbe:
+  enabled: true
+  path: /health
+  initialDelaySeconds: 10
+  periodSeconds: 30
